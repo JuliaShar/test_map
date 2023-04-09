@@ -181,6 +181,21 @@
     .setLatLng([43.219793, 76.851167])
     .setContent("Welcome to Almaty!")
     .openOn(map);
+            
+            // create legend
+const legend = L.control({ position: "bottomleft" });
+
+legend.onAdd = function () {
+  let div = L.DomUtil.create("div", "description");
+  L.DomEvent.disableClickPropagation(div);
+  const text =
+    "<b>Almaty, Kazakhstan</b> used to be the capitol of Kazakhstan. It houses many attractions, including several historical monuments, a Botanical Garden, and a mountain top amusement park called Kok Tobe.";
+  div.insertAdjacentHTML("beforeend", text);
+  return div;
+};
+
+legend.addTo(map);
+
         
         </script>
     </body>
