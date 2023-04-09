@@ -176,10 +176,11 @@
         var baseMaps = {};
         L.control.layers(baseMaps,{'<img src="legend/BuildingsinAlmaty_1.png" /> Buildings in Almaty ': layer_BuildingsinAlmaty_1,"OSM Standard": layer_OSMStandard_0,}).addTo(map);
         setBounds();
-        const popup = new mapboxgl.Popup({ closeOnClick: false })
-        .setLngLat([76, 43.1])
-        .setHTML('<h1>Welcome to Almaty, KZ!</h1>')
-        .addTo(map);    
+            
+        var popup = L.popup()
+    .setLatLng([43.1, 76.6])
+    .setContent("Welcome to Almaty!")
+    .openOn(map);
         
         </script>
     </body>
